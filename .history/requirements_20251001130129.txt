@@ -11,6 +11,7 @@ python-box==6.0.2
 pyYAML
 tqdm
 pydantic
+import pydantic
 joblib
 types-PyYAML
 scipy
