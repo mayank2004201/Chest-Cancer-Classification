@@ -4,6 +4,7 @@ from src.Chest_Cancer_Classification.pipeline.stage_2_prepare_base_model import 
 
 Stage_name = "Data Ingestion Stage"
 
+
 try:
     logger.info(f">>>>>>> Stage {Stage_name} started <<<<<<<<<")
     obj = DataIngestionTrainingPipeline()
@@ -15,6 +16,7 @@ except Exception as e:
 
 
 Stage_name = "Prepare base model"
+
 
 try:
     logger.info(f"*****************")

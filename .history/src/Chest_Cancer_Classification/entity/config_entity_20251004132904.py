@@ -8,6 +8,8 @@ class DataIngestionConfig:
     local_data_file: Path
     unzip_dir: Path
     
+    
+    
 
 @dataclass(frozen=True)
 class PrepareBaseModelConfig:
