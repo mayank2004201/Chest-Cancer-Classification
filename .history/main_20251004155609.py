@@ -36,7 +36,7 @@ Stage_name = "Training"
 try:
     logger.info(f"*****************")
     logger.info(f">>>>>>> Stage {Stage_name} started <<<<<<<<<")
-    model_trainer = ModelTrainingPipeline()
+    model_trainer = PrepareBaseModelTrainingPipeline()
     model_trainer.main()
     logger.info(f">>>>>>> Stage {Stage_name} completed <<<<<<<<\n\nx================x")
 except Exception as e:

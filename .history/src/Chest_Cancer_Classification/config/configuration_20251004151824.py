@@ -1,10 +1,7 @@
-import os
-from pathlib import Path
 from Chest_Cancer_Classification.constants import *
 from Chest_Cancer_Classification.utils.common import read_yaml,create_directories
 from Chest_Cancer_Classification.entity.config_entity import (DataIngestionConfig,
-                                                              PrepareBaseModelConfig,
-                                                              TrainingConfig)
+                                                              PrepareBaseModelConfig)
 
 
 

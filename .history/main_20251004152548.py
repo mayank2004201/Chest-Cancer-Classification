@@ -1,10 +1,7 @@
 from src.Chest_Cancer_Classification import logger
 from src.Chest_Cancer_Classification.pipeline.stage_1_data_ingestion import DataIngestionTrainingPipeline
 from src.Chest_Cancer_Classification.pipeline.stage_2_prepare_base_model import PrepareBaseModelTrainingPipeline
-from src.Chest_Cancer_Classification.pipeline.stage_3_model_trainer import ModelTrainingPipeline
-
-import os
-os.chdir(r"C:\Users\Mayank Goel\OneDrive\Desktop\Chest Cancer Classification Using ML Flow")
+from src.Chest_Cancer_Classification.
 
 Stage_name = "Data Ingestion Stage"
 
@@ -36,8 +33,8 @@ Stage_name = "Training"
 try:
     logger.info(f"*****************")
     logger.info(f">>>>>>> Stage {Stage_name} started <<<<<<<<<")
-    model_trainer = ModelTrainingPipeline()
-    model_trainer.main()
+    prepare_base_model = PrepareBaseModelTrainingPipeline()
+    prepare_base_model.main()
     logger.info(f">>>>>>> Stage {Stage_name} completed <<<<<<<<\n\nx================x")
 except Exception as e:
     logger.exception(e)
