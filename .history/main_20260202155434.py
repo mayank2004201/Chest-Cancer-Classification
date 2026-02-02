@@ -5,13 +5,16 @@ from src.Chest_Cancer_Classification.pipeline.stage_3_model_trainer import Model
 from src.Chest_Cancer_Classification.pipeline.stage_4_model_evaluation import EvaluationPipeline
 
 import os
-os.environ["MLFLOW_DISABLE_GIT_COMMIT_TRACKING"] = "true"
-
+# main.py (top of file)
 from dotenv import load_dotenv
-load_dotenv()
+import os
 
+load_dotenv()  # ← this loads .env from root
+
+# Optional: log to confirm
 print("MLFLOW_TRACKING_URI from env:", os.getenv("MLFLOW_TRACKING_URI"))
 
+# Then import mlflow and continue...
 import mlflow
 mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
 os.chdir(r"C:\Users\Mayank Goel\OneDrive\Desktop\Chest Cancer Classification Using ML Flow")

@@ -63,6 +63,7 @@ def save_json(data: dict, path: Path):
     """
     with open(path,"w") as f:
         json.dump(data,f,indent=4)
+        
     logger.info(f"Json file saved at: {path}")
 
 @validate_arguments

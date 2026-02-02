@@ -61,8 +61,7 @@ def save_json(data: dict, path: Path):
         data (dict): Data to be saved in json file
         path (Path): Path to json file.
     """
-    with open(path,"w") as f:
-        json.dump(data,f,indent=4)
+    joblib.dump(value=data, filename=path)
     logger.info(f"Json file saved at: {path}")
 
 @validate_arguments

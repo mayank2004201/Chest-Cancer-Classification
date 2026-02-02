@@ -53,17 +53,7 @@ def create_directories(path_to_directories: list, verbose: bool = True):
         if verbose:
             logger.info(f"Created directory at: {path}")
             
-@validate_arguments
-def save_json(data: dict, path: Path):
-    """Save json data
 
-    Args:
-        data (dict): Data to be saved in json file
-        path (Path): Path to json file.
-    """
-    with open(path,"w") as f:
-        json.dump(data,f,indent=4)
-    logger.info(f"Json file saved at: {path}")
 
 @validate_arguments
 def load_json(path: Path) -> ConfigBox:

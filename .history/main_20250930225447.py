@@ -1,1 +1,0 @@
-from src.Chest_Cancer_Classification import logger

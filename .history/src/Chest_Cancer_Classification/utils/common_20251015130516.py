@@ -58,12 +58,11 @@ def save_json(data: dict, path: Path):
     """Save json data
 
     Args:
-        data (dict): Data to be saved in json file
+        data (dict): Data to save.
         path (Path): Path to json file.
     """
-    with open(path,"w") as f:
-        json.dump(data,f,indent=4)
-    logger.info(f"Json file saved at: {path}")
+    joblib.dump(value=data, filename=path)
+    logger.info(f"Binary file saved at: {path}")
 
 @validate_arguments
 def load_json(path: Path) -> ConfigBox:

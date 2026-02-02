@@ -6,14 +6,6 @@ from src.Chest_Cancer_Classification.pipeline.stage_4_model_evaluation import Ev
 
 import os
 os.environ["MLFLOW_DISABLE_GIT_COMMIT_TRACKING"] = "true"
-
-from dotenv import load_dotenv
-load_dotenv()
-
-print("MLFLOW_TRACKING_URI from env:", os.getenv("MLFLOW_TRACKING_URI"))
-
-import mlflow
-mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
 os.chdir(r"C:\Users\Mayank Goel\OneDrive\Desktop\Chest Cancer Classification Using ML Flow")
 
 Stage_name = "Data Ingestion Stage"

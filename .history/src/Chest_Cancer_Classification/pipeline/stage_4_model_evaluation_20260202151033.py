@@ -1,0 +1,10 @@
+from Chest_Cancer_Classification.config.configuration import ConfigurationManager
+from Chest_Cancer_Classification.components.model_evaluation_mlflow import Evaluation
+from Chest_Cancer_Classification import logger
+
+
+Stage_name = 'Evaluation'
+
+
+
+class EvaluationPipeline
