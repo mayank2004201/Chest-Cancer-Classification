@@ -1,0 +1,9 @@
+FROM python:3.12.10-slim-bookworm
+
+RUN apt update -y && \
+    apt install -y build-essential libpq-dev curl && \
+    curl -sSL https://install.python-poetry.org | python3 - && \
+    ln -s /root/.local/bin/poetry /usr/local/bin/poetry && \
+    apt remove -y curl && \
+    apt autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
