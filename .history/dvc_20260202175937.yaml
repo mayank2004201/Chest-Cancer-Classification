@@ -1,0 +1,8 @@
+stages:
+  data_ingestion:
+    cmd: python src/Chest_Cancer_Classification/pipeline/stage_1_data_ingestion.py
+    deps:
+      - src/Chest_Cancer_Classification/pipeline/stage_1_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/Chest-CT-Scan_data
