@@ -1,0 +1,16 @@
+import numpy as np 
+from tensorflow.keras.models import load_model
+from tensorflow.preprocessing.image import image
+import os 
+
+class predictionPipeline:
+    def __init__(self,filename):
+        self.filename = filename
+        
+    def predict(self):
+        model = load_model(os.path.join("artifacts","training","model.h5"))
+        
+        image_name = self.filename
+        test_image = 
+        
+    
