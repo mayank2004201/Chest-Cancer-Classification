@@ -365,11 +365,8 @@ Final model performance metrics (stored in `scores.json`):
 
 ```json
 {
-  "accuracy": "0.XX",
-  "precision": "0.XX",
-  "recall": "0.XX",
-  "f1_score": "0.XX",
-  "auc_roc": "0.XX"
+  "loss": "0.7337068915367126"
+  "accuracy": "0.6655518412590027",
 }
 ```
 
