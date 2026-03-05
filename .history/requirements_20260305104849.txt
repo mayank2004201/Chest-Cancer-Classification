@@ -16,6 +16,6 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
-gunicorn==22.0.0
+gunicorn
 -e .
 

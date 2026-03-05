@@ -1,5 +1,6 @@
-FROM python:3.10-slim-bookworm  
+FROM python:3.10-slim-bookworm  # More stable for TF than 3.12 in many cases
 
+# Install system deps needed by OpenCV / TensorFlow
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
@@ -10,11 +11,14 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
+# Copy only what's needed first for better caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Then copy the rest
 COPY . .
 
+# Expose the port Render will use
 EXPOSE 8080
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--timeout", "120", "app:app"]

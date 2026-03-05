@@ -1,5 +1,6 @@
-FROM python:3.10-slim-bookworm  
+FROM python:3.10-slim-bookworm  # More stable for TF than 3.12 in many cases
 
+# Install system deps needed by OpenCV / TensorFlow
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
